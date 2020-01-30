@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav>
+      <ul class="main-menu" type="None">
+          <li class="menu"><a class="link1" href="#">Menu</a></li>
+        <li class="item"><a class="link1" href="index.html">Strona główna</a></li>
+        <li class="item"><a class="link1" href="zakupBiletu.html">Kup bilet</a></li>
+        <li class="item dropdown">
+          <a class="link1"href="wystawy.html">Wystawy</a>
+          <ul class="submenu">
+            <li class="item2"><a href="stratyWojenne.html">Straty wojenne</a></li>
+            <li class="item2"><a href="seanseMultimedialne.html">Seanse multimedialne</a></li>
+            <li class="item2"><a class="dropdown2" href="projektUnijny.html">Projekt unijny</a>
+              <ul class="submenu">
+                <li class="item3"> <a href="projektUnijny.html#cel">Cel</a></li>
+                <li class="item3"> <a href="projektUnijny.html#opis">Opis</a></li>
+                <li class="item3"><a href="projektUnijny.html#finansowanie">Finansowanie</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <a class="link1" href="mailto:piotr.papriko@gmail.com?subject=Moja_opinia"
+            >Prześlij opinię</a
+          >
+        </li>
+        <li class="item"><a class="link1" href="ankieta.html">Ankieta</a></li>
+        <li class="item"><a class="link1" href="onas.html">O nas</a></li>
+      </ul>
+    </nav>
+      <div class="ticketForm">
+          <img id="ticketForm-image" src="images/ticketform.png">
+          <form id="zakupBiletu" autocomplete="on">
+              Imię:<br />
+              <input type="text" name="name" autofocus/> (np. Piotr)
+              <br />Nazwisko:<br />
+                <input type="text" name="sname" required/> (np. Kowalski)
+              <p>
+                <label for="miesiac-urodzenia">Miesiąc urodzenia:
+                    <input type="text" id="miesiac-urodzenia" placeholder="Skarb Średzki" list="miesiace"/>
+                        <datalist id="miesiace">
+                            <option value="Styczeń"></option>
+                            <option value="Luty"></option>
+                            <option value="Marzec"></option>
+                            <option value="Kwiecień"></option>
+                            <option value="Maj"></option>
+                            <option value="Czerwiec"></option>
+                            <option value="Lipiec"></option>
+                            <option value="Sierpień"></option>
+                            <option value="Wrzesień"></option>
+                            <option value="Październik"></option>
+                            <option value="Listopad"></option>
+                            <option value="Grudzień"></option>
+                        </datalist>
+                </label>
+              </p>
+              <br />Adres e-mail:<br />
+              <input type="email" name="email" required/> (name@domain.com)
+              <br />Telefon:<br />
+              <input type="tel" name="phone" disabled="disabled"pattern = "\(\d{3}\) +\d{3}-\d{4}"/> (***) ***-****
+              <br />Typ biletu:<br />
+              <input type="radio" name="typ" value="normalny" checked />Normalny<br />
+              <input type="radio" name="typ" value="ulgowy" />Ulgowy<br />
+              <br />Jeżeli ulgowy, to wybierz rodzaj ulgi<br />
+              <select name="ulgi" form="zakupBiletu">
+                <option>Brak</option>
+                <optgroup label="Nauczanie">
+                  <option>Dla dziecka do lat 4</option>
+                  <option>Dzieci/młodzież</option>
+                  <option>Studenci do lat 26/Doktoranci do lat 35</option>
+                </optgroup>
+                <optgroup label="Wojskowi">
+                  <option>Weterani</option>
+                  <option>Kombatanci</option>
+                  <option>Żołnierze</option>
+                  <option>Inwalidzi wojenni i wojskowi</option>
+                </optgroup>
+                <optgroup label="Seniorzy">
+                  <option>Bilet dla seniora</option>
+                </optgroup>
+              </select>
+              <br /><br />
+              <input type="reset" value="Reset" />
+              <input type="submit" value="Submit" />
+              <br /><br />
+              <input type="checkbox" name="regulamin" />
+              <label>Oświadczam, że zapoznałem się z
+                <a href="regulamin.pdf" download="regulamin.pdf">regulaminem</a> działania
+                naszego serwisu.</label> <br />
+              <input type="checkbox" name="daneOsobowe" />
+              <label>Oświadczam, że zezwalam na
+                przetwarzanie moich danych osobowych</label><br />
+            </form>
+            <br />Podziel się swoimi uwagami odnośnie działania naszego serwisu<br />
+            <textarea
+              name="uwagi"
+              maxlength="200"
+              rows="5"
+              cols="60"
+              form="zakupBiletu"
+            >
+        Miejsce na twoje uwagi :)</textarea
+            >
+      </div>
+
+  </body>
+</html>

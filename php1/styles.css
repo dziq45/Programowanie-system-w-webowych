@@ -1,0 +1,293 @@
+* {
+    font-family: BigShouldersText;
+}
+body{
+  padding: 0;
+  margin: 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+@font-face {
+    font-family: 'BigShouldersText';
+    src: url(BigShouldersText-Regular.ttf);
+}
+
+a {
+    text-shadow: 1px 1px red;
+}
+
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index: 4;
+}
+li ul { display: none; }
+ul li{position: relative;}
+a{
+  text-decoration: none;
+}
+a:visited{
+  color:black;
+}
+.main-menu {
+  list-style-type: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  clear:right;
+  background-color: rgba(51, 51, 51, 1);
+  pointer-events: none;
+}
+.main-menu li {
+  float: left;
+}
+.item:nth-child(1) a.link1{
+  transition-delay: 0.2s;
+}
+.item:nth-child(2) a.link1{
+  transition-delay: 0.25s;
+}
+.item:nth-child(3) a.link1{
+  transition-delay: 0.3s;
+}
+.item:nth-child(4) a.link1{
+  transition-delay: 0.35s;
+}
+.item:nth-child(5) a.link1{
+  transition-delay: 0.4s;
+}
+.item:nth-child(6) a.link1{
+  transition-delay: 0.45s;
+}
+.item:nth-child(7) a.link1{
+  transition-delay: 0.5s;
+}
+.item:nth-child(8) a.link1{
+  transition-delay: 0.55s;
+}
+.main-menu:hover .item a{
+  opacity:1;
+  pointer-events: all;
+}
+.main-menu:hover{
+  pointer-events: all;
+}
+.menu{
+  pointer-events: all;
+}
+.item a{
+  opacity:0;
+  transition: opacity 0.5s ease, top 0.5s ease;
+}
+li:hover > ul{
+  display:block;
+  position:absolute;
+}
+
+ul li a {
+  text-decoration: none;
+}
+.submenu{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #333333;
+}
+.main-menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+}
+ul:before,
+ul:after {
+  content: " ";
+  display: table; 
+}
+ul:after { clear: both; }
+
+nav li:hover > a{
+  color: red;
+}
+ul ul ul {
+  left: 100%;
+  top:0
+  }
+  
+li:hover li { float: none; }
+
+.maintable {
+  margin-top:70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+table th {
+  border: 1px solid black;
+  background-color:white;
+  border-radius: 10px;
+  padding:10px;
+}
+.main-block {
+  width: 950px;
+  margin: 55px auto;
+  margin-bottom: 0;
+  background-color: white;
+  padding:15px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 16px;
+  background-image: url(images/tlo.jpg);
+  background-position: center;
+  background-origin: content-box;
+  background-repeat: repeat-y;
+  border-style: solid;
+  border-width: 40px;
+  border-image-source: url('images/romb.jpg');
+  border-image-repeat: repeat;
+  border-image-slice:35%;
+  border-image-outset: 3px 2px 2px 3px;
+  border-image-width: 50px;
+}
+.main-block p {
+  font-size: medium;
+}
+.cont{
+  width: 70%;
+  background-color: darkgray;
+}
+.ticketForm{
+  position: relative;
+  width:33%;
+  top:20px;
+  padding: 20px;
+  margin:55px auto;
+  margin-bottom: 0;
+  border-radius: 20px;
+  background-color: hsla(34, 7%, 84%, 0.87);
+  box-shadow: 5px 3px #dcc5a7;
+  background: radial-gradient(#ffffff, #dcc5a7);
+  border-style: solid;
+  border-width: 20px;
+}
+#ticketForm-image{
+  position: absolute;
+  width:150px;
+  height: 150px;
+  right: 25px;
+  top:20px;
+}
+footer{
+  border-top:1px black;
+  border-top-style:solid;
+}
+.main-block aside{
+  line-height: 80%;
+  font-variant: small-caps;
+  font-style:italic;
+}
+/*
+#skarb-sredzki p{
+  font-family: 'Times New Roman', Times, serif;
+  font-size:medium;
+}
+*/
+#opinie{
+  margin:20px;
+  border-top: 1px dotted black
+}
+#opinie h3{
+  font-weight: lighter;
+}
+section{
+  text-align: justify;
+  text-justify: auto;
+  padding: 20px;
+}
+
+#name-info {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 24px;
+    opacity: 0;
+    animation-name: show-name;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes show-name {
+    0% {opacity: 0.1;}
+    25% {opacity: 0.4;}
+    50% {opacity: 0.6;}
+    75% {opacity: 0.8;}
+    100% {opacity: 1;}
+}
+
+#ticketForm-image {
+    transition: transform 0.4s;
+}
+
+#ticketForm-image:hover {
+    transform: rotate(360deg);
+}
+
+#picture-stories {
+    transition: transform 1s;
+}
+
+#picture-stories:hover {
+    transform: translate(16px, 16px);
+}
+
+#skarb-sredzki-image {
+    transition: transform 1s;
+}
+
+#skarb-sredzki-image:hover {
+    transform: skewX(-20deg);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 4%;
+}
+
+.container-column {
+    width: 22%;
+    padding-top: 50px;
+    margin: 2%;
+    transition: width 1s ease;
+}
+
+.container-column:hover {
+    width: 40%;
+    padding-top: 50px;
+}
+
+#hours {
+    padding-top: 50px;
+}
+
+#about-us {
+    padding: 16px;
+    column-count: 3;
+    column-gap: 20px;
+    column-rule: 2px dotted grey;
+}
+@media screen and (max-width: 640px) {
+    #about-us {
+        padding: 16px;
+        column-count: 1;
+    }
+}
+.cell{
+  border: 1px solid black;
+  width:20px;
+  height:20px;
+  display:inline-block
+}

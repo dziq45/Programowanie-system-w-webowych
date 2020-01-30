@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+  <head>
+       
+    <meta charset="utf-8" />
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+    <style>
+        .cell{
+            border: 1.5px solid black;
+            width:20px;
+            height:20px;
+            display:inline-block;
+            margin:1px;
+            padding:0px;
+        }
+        .rowGame{
+            height:24px;
+            margin:0px;
+            padding:0px;
+        }
+        .confCell{
+            display:inline-block;
+            border: 1.5px solid black;
+            width:20px;
+            height:60px;
+            margin:1px;
+            padding:0px;
+            text-align: center;
+        }
+        .confColumnsContainer{
+            position: relative;
+            left:73px;
+            width:fit-content;
+        }
+        .confRowsContainer{
+            display: inline-block;
+            position: relative;
+            margin-right: 8px;
+            width:fit-content;
+        }
+        .boardContainer{
+            display: inline-block;
+            position: relative;
+            top:8px;
+            width:fit-content;
+        }
+        .confRowCell{
+            border: 1.5px solid black;
+            width:60px;
+            height:20px;
+            margin:1px;
+            padding:0px;
+            top:0px;
+        }
+        .regulamin{
+            border: 1px solid black;
+            display: inline-block;
+            vertical-align: top;
+            width:500px;
+            padding:5px;
+        }
+        .buttonsContainer{
+            display: inline-block;
+            position: relative;
+            top:0px;
+            vertical-align: top;
+            margin:6px;
+        }
+        .button{
+            margin:2px;
+        }
+    </style>
+    </head>
+    <body>
+        <script src="zagadka.js"></script>
+        <div class="regulamin">
+            <p>Zasady gry znajdziesz na <a href="https://pl.puzzle-nonograms.com/faq.php">tej stronie</a>.</p>
+            <ul>Sterowanie:
+                <li>Spacja - malowanie na niebiesko</li>
+                <li>X - zaznaczanie który element nie będzie na pewno zamalowany</li>
+                <li>Do malowania na niebiesko można również użyć myszy</li>
+            </ul>
+            <center> <h3 id="badAnswer"></h3>
+                <img id="twoHead"></center>
+            
+           
+        </div>
+        <p id="counter">Liczba prób: 1</p>
+    </body>
+  </html>
